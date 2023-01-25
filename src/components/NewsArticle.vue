@@ -1,11 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { defineProps } from "vue"
+
+interface News {
+  date: string
+  descr: string
+}
+
+defineProps<News>()
+</script>
 
 <template>
   <article>
-    <span>12:00</span>
+    <span>{{ date }}</span>
+
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptatum dolores consequatur debitis nisi eaque voluptate doloremque, at nam soluta, hic explicabo alias. Veritatis veniam eius
-      ratione? Atque, culpa numquam?
+      {{ descr }}
     </p>
   </article>
 </template>

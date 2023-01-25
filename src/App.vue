@@ -1,10 +1,18 @@
+<script lang="ts" setup>
+import TheButtons from "@/components/TheButtons.vue"
+import TheLogo from "@/components/TheLogo.vue"
+import AdBlocks from "@/components/AdBlocks.vue"
+</script>
+
 <template>
   <header>
     <nav>
       <div></div>
-      <img src="@/assets/logo.svg" width="200" alt="Ресторанный" />
-      <button>Войти</button>
-      <button>Регистрация</button>
+
+      <TheLogo />
+
+      <TheButtons title="Войти" />
+      <TheButtons title="Регистрация" state />
     </nav>
 
     <nav>
@@ -26,64 +34,65 @@
   <router-view />
 
   <aside>
-    <article>
-      <img src="@/assets/images/anita-austvika-mBVDi_cmkOg-unsplash.webp" alt="" />
-      <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta!</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus aperiam mollitia iusto sed doloribus dignissimos eaque deserunt! Nam perspiciatis accusamus molestias. Dicta
-        eligendi placeat amet nulla quia et doloremque?
-      </p>
-    </article>
+    <AdBlocks
+      image="anita-austvika-mBVDi_cmkOg-unsplash"
+      title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta!"
+      descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus aperiam mollitia iusto sed doloribus dignissimos eaque deserunt! Nam perspiciatis accusamus molestias. Dicta eligendi
+      placeat amet nulla quia et doloremque?"
+    />
 
-    <article>
-      <img src="@/assets/images/anita-austvika-mBVDi_cmkOg-unsplash.webp" alt="" />
-      <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta!</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus aperiam mollitia iusto sed doloribus dignissimos eaque deserunt! Nam perspiciatis accusamus molestias. Dicta
-        eligendi placeat amet nulla quia et doloremque?
-      </p>
-    </article>
+    <AdBlocks
+      image="anita-austvika-mBVDi_cmkOg-unsplash"
+      title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta!"
+      descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus aperiam mollitia iusto sed doloribus dignissimos eaque deserunt! Nam perspiciatis accusamus molestias. Dicta eligendi
+      placeat amet nulla quia et doloremque?"
+    />
 
-    <article>
-      <img src="@/assets/images/anita-austvika-mBVDi_cmkOg-unsplash.webp" alt="" />
-      <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta!</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus aperiam mollitia iusto sed doloribus dignissimos eaque deserunt! Nam perspiciatis accusamus molestias. Dicta
-        eligendi placeat amet nulla quia et doloremque?
-      </p>
-    </article>
-
-    <article>
-      <img src="@/assets/images/anita-austvika-mBVDi_cmkOg-unsplash.webp" alt="" />
-      <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta!</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus aperiam mollitia iusto sed doloribus dignissimos eaque deserunt! Nam perspiciatis accusamus molestias. Dicta
-        eligendi placeat amet nulla quia et doloremque?
-      </p>
-    </article>
-
-    <article>
-      <img src="@/assets/images/anita-austvika-mBVDi_cmkOg-unsplash.webp" alt="" />
-      <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta!</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus aperiam mollitia iusto sed doloribus dignissimos eaque deserunt! Nam perspiciatis accusamus molestias. Dicta
-        eligendi placeat amet nulla quia et doloremque?
-      </p>
-    </article>
-
-    <article>
-      <img src="@/assets/images/anita-austvika-mBVDi_cmkOg-unsplash.webp" alt="" />
-      <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta!</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus aperiam mollitia iusto sed doloribus dignissimos eaque deserunt! Nam perspiciatis accusamus molestias. Dicta
-        eligendi placeat amet nulla quia et doloremque?
-      </p>
-    </article>
+    <AdBlocks
+      image="anita-austvika-mBVDi_cmkOg-unsplash"
+      title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta!"
+      descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatibus aperiam mollitia iusto sed doloribus dignissimos eaque deserunt! Nam perspiciatis accusamus molestias. Dicta eligendi
+      placeat amet nulla quia et doloremque?"
+    />
   </aside>
 
   <footer>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, temporibus nemo error suscipit ex dolore exercitationem iusto excepturi facilis veniam, quibusdam dolorem rem sint, amet
-    distinctio in corrupti nihil incidunt.
+    <div>
+      <TheLogo color />
+
+      <router-link to="/" :text="'email@email.ru'" />
+
+      <nav class="social">
+        <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
+          <img src="@/assets/logo.png" alt="/" />
+        </router-link>
+
+        <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
+          <img src="@/assets/logo.png" alt="/" />
+        </router-link>
+
+        <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
+          <img src="@/assets/logo.png" alt="/" />
+        </router-link>
+
+        <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
+          <img src="@/assets/logo.png" alt="/" />
+        </router-link>
+      </nav>
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat eius perspiciatis nam neque? Natus, accusantium. Amet vel autem repellendus totam neque, asperiores iure non nostrum,
+      natus vitae similique, ipsam delectus enim tenetur? Fugiat quisquam magnam, molestias consequatur autem illo dolor tenetur laborum reiciendis impedit quos consectetur inventore iusto mollitia
+      delectus est harum? Placeat ducimus mollitia qui vel ipsam consectetur aut minus nemo dicta explicabo in sint quos sapiente, quisquam facilis! Consequatur facilis ullam, quidem amet distinctio
+      magni nisi. Sed.
+    </p>
+
+    <nav class="info">
+      <router-link to="/" :text="'lorem ipsum'" />
+      <router-link to="/" :text="'lorem ipsum'" />
+      <router-link to="/" :text="'lorem ipsum'" />
+    </nav>
   </footer>
 </template>
 
@@ -241,11 +250,12 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 0 40px;
 }
 
 header {
   flex: 100%;
-  padding: 0 40px;
+  // padding: 0 40px;
 
   nav {
     display: flex;
@@ -260,7 +270,7 @@ header {
         margin: 0 auto 0 0;
       }
 
-      img {
+      svg {
         margin: 0 auto 0 0;
       }
     }
@@ -288,7 +298,45 @@ aside {
 }
 
 footer {
+  align-items: center;
+  background: #24292e;
+  color: #fff;
+  display: grid;
   flex: 100%;
-  padding: 40px;
+  grid-template-columns: 400px 1fr;
+  gap: 40px;
+  padding: 80px 40px 40px;
+
+  p {
+    max-width: 600px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .social {
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 30px;
+      }
+
+      // a {
+      //   background: #53565a;
+      //   border-radius: 50px;
+      //   padding: 15px;
+      // }
+    }
+  }
+
+  .info {
+    display: flex;
+    gap: 20px;
+    grid-area: 2;
+    margin-top: 80px;
+  }
 }
 </style>

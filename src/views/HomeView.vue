@@ -1,6 +1,30 @@
 <script lang="ts" setup>
 import NewsArticle from "@/components/NewsArticle.vue"
 import PostCard from "@/components/PostCard.vue"
+
+const items = [
+  {
+    id: 1,
+    date: "22:30",
+    descr:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad iste repellendus fugit. Rerum, facilis asperiores? Fugiat enim, delectus, itaque sed nostrum, cupiditate vero dolorem dolore corporis hic?",
+  },
+  {
+    id: 2,
+    date: "20:30",
+    descr: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
+  },
+  {
+    id: 3,
+    date: "21:00",
+    descr: "Rerum, facilis asperiores? Fugiat enim, delectus, odio reiciendis quia itaque sed nostrum, cupiditate vero dolorem dolore corporis hic?",
+  },
+  {
+    id: 4,
+    date: "19:27",
+    descr: "odio reiciendis quia itaque sed nostrum, cupiditate vero dolorem dolore corporis hic?",
+  },
+]
 </script>
 
 <template>
@@ -8,17 +32,7 @@ import PostCard from "@/components/PostCard.vue"
     <section class="container__news">
       <h3>Новости</h3>
 
-      <NewsArticle />
-      <NewsArticle />
-      <NewsArticle />
-
-      <NewsArticle />
-      <NewsArticle />
-      <NewsArticle />
-
-      <NewsArticle />
-      <NewsArticle />
-      <NewsArticle />
+      <NewsArticle v-for="i in items" :key="i.id" :date="i.date" :descr="i.descr" />
     </section>
 
     <section class="container__content">
@@ -67,7 +81,7 @@ dolorem dolore corporis hic?"
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 0 40px;
+    // padding: 0 40px;
   }
 
   &__content {
