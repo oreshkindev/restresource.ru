@@ -17,7 +17,7 @@ import SocialMedia from "@/components/SocialMedia.vue"
     </nav>
 
     <nav>
-      <button>==</button>
+      <i class="icon-menu" />
 
       <a href="#">О проекте</a>
       <a href="#">Информационная база</a>
@@ -28,6 +28,8 @@ import SocialMedia from "@/components/SocialMedia.vue"
 
       <form action="#">
         <input type="text" placeholder="Поиск" />
+
+        <i class="icon-search-solid" />
       </form>
     </nav>
   </header>
@@ -84,6 +86,38 @@ import SocialMedia from "@/components/SocialMedia.vue"
 </template>
 
 <style lang="scss">
+@font-face {
+  font-display: auto;
+  font-family: "Iconly";
+  font-style: normal;
+  font-weight: 400;
+  src: url("@/assets/fonts/icons/iconly.eot");
+  src: url("@/assets/fonts/icons/iconly.eot") format("embedded-opentype"), url("@/assets/fonts/icons/iconly.woff2") format("woff2"), url("@/assets/fonts/icons/iconly.woff") format("woff"),
+    url("@/assets/fonts/icons/iconly.ttf") format("truetype"), url("@/assets/fonts/icons/iconly.svg") format("svg");
+}
+[class="icon"],
+[class^="icon-"],
+[class*=" icon-"] {
+  color: var(--scheme-v3);
+  display: inline-block;
+  font-family: "Iconly" !important;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-search-solid:before {
+  content: "\e000";
+}
+
+.icon-menu:before {
+  content: "\e001";
+}
+
 /* Reset and base styles  */
 
 * {
@@ -248,6 +282,16 @@ header {
     display: flex;
     padding: 20px 0;
 
+    i {
+      cursor: pointer;
+      font-size: 20px;
+      margin: 0 auto 0 0;
+
+      &:last-child {
+        transform: rotate(-90deg);
+      }
+    }
+
     &:first-child {
       border-bottom: 1px solid #e5e5e5;
       display: grid;
@@ -267,12 +311,12 @@ header {
       display: flex;
       gap: 40px;
 
-      button {
-        margin: 0 auto 0 0;
-      }
-
       form {
         margin: 0 0 0 auto;
+
+        input::placeholder {
+          text-transform: uppercase;
+        }
       }
     }
   }
