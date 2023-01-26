@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import NewsArticle from "@/components/NewsArticle.vue"
 import PostCard from "@/components/PostCard.vue"
+import TheButtons from "@/components/TheButtons.vue"
 
 const items = [
   {
@@ -65,6 +66,8 @@ dolorem dolore corporis hic?"
         image="anita-austvika-mBVDi_cmkOg-unsplash"
         covered
       />
+
+      <TheButtons title="Показать еще " state />
     </section>
   </div>
 </template>
@@ -91,6 +94,7 @@ dolorem dolore corporis hic?"
     flex-grow: 1;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 
     article {
       flex: 1;
