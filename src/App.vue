@@ -2,6 +2,7 @@
 import TheButtons from "@/components/TheButtons.vue"
 import TheLogo from "@/components/TheLogo.vue"
 import AdBlocks from "@/components/AdBlocks.vue"
+import SocialMedia from "@/components/SocialMedia.vue"
 </script>
 
 <template>
@@ -58,35 +59,21 @@ import AdBlocks from "@/components/AdBlocks.vue"
 
   <footer>
     <div>
-      <TheLogo color />
+      <span>
+        <TheLogo color />
 
-      <router-link to="/" :text="'email@email.ru'" />
+        <router-link to="/" :text="'email@email.ru'" />
 
-      <nav class="social">
-        <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
-          <img src="@/assets/logo.png" alt="/" />
-        </router-link>
+        <SocialMedia />
+      </span>
 
-        <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
-          <img src="@/assets/logo.png" alt="/" />
-        </router-link>
-
-        <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
-          <img src="@/assets/logo.png" alt="/" />
-        </router-link>
-
-        <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
-          <img src="@/assets/logo.png" alt="/" />
-        </router-link>
-      </nav>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat eius perspiciatis nam neque? Natus, accusantium. Amet vel autem repellendus totam neque, asperiores iure non nostrum,
+        natus vitae similique, ipsam delectus enim tenetur? Fugiat quisquam magnam, molestias consequatur autem illo dolor tenetur laborum reiciendis impedit quos consectetur inventore iusto mollitia
+        delectus est harum? Placeat ducimus mollitia qui vel ipsam consectetur aut minus nemo dicta explicabo in sint quos sapiente, quisquam facilis! Consequatur facilis ullam, quidem amet distinctio
+        magni nisi. Sed.
+      </p>
     </div>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat eius perspiciatis nam neque? Natus, accusantium. Amet vel autem repellendus totam neque, asperiores iure non nostrum,
-      natus vitae similique, ipsam delectus enim tenetur? Fugiat quisquam magnam, molestias consequatur autem illo dolor tenetur laborum reiciendis impedit quos consectetur inventore iusto mollitia
-      delectus est harum? Placeat ducimus mollitia qui vel ipsam consectetur aut minus nemo dicta explicabo in sint quos sapiente, quisquam facilis! Consequatur facilis ullam, quidem amet distinctio
-      magni nisi. Sed.
-    </p>
 
     <nav class="info">
       <router-link to="/" :text="'lorem ipsum'" />
@@ -298,44 +285,27 @@ aside {
 }
 
 footer {
-  align-items: center;
   background: #24292e;
   color: #fff;
-  display: grid;
   flex: 100%;
-  grid-template-columns: 400px 1fr;
-  gap: 40px;
   padding: 80px 40px 40px;
 
-  p {
-    max-width: 600px;
-  }
-
   div {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 
-    .social {
-      display: flex;
-      gap: 20px;
-
-      img {
-        width: 30px;
+    span {
+      a {
+        display: block;
+        margin: 20px 0;
       }
-
-      // a {
-      //   background: #53565a;
-      //   border-radius: 50px;
-      //   padding: 15px;
-      // }
     }
   }
 
   .info {
     display: flex;
     gap: 20px;
-    grid-area: 2;
     margin-top: 80px;
   }
 }
