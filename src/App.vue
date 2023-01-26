@@ -249,6 +249,7 @@ header {
     padding: 20px 0;
 
     &:first-child {
+      border-bottom: 1px solid #e5e5e5;
       display: grid;
       grid-template-columns: 1fr 1fr auto auto;
       gap: 40px;
