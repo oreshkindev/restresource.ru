@@ -16,10 +16,15 @@ defineProps<Button>()
 <style scoped lang="scss">
 button {
   &.state {
-    background: #000;
+    border: 1px solid #000;
     border-radius: 50px;
-    color: #fff;
     padding: 5px 20px;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background: #000;
+      color: #fff;
+    }
   }
 }
 </style>
