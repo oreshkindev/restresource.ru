@@ -73,12 +73,12 @@ dolorem dolore corporis hic?"
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   flex: 1;
+  gap: 20px;
 
   &__news {
-    flex: 0 1 20%;
     display: flex;
+    flex: 0 1 20%;
     flex-direction: column;
     gap: 20px;
     // padding: 0 40px;
@@ -86,9 +86,9 @@ dolorem dolore corporis hic?"
 
   &__content {
     align-content: flex-start;
+    display: flex;
     flex: 1;
     flex-grow: 1;
-    display: flex;
     flex-wrap: wrap;
     gap: 20px;
 

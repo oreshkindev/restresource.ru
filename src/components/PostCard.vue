@@ -40,8 +40,8 @@ article {
     color: #ffffff;
     display: grid;
     padding: 40px 20px;
-    place-content: end;
     min-height: 600px;
+    place-content: end;
   }
 
   picture {
@@ -55,8 +55,8 @@ article {
     margin: 10px 0;
 
     span {
-      font-size: initial;
       display: block;
+      font-size: initial;
       margin: 10px 0;
     }
   }

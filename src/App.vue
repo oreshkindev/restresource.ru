@@ -278,8 +278,8 @@ header {
 }
 
 aside {
-  flex: 0 1 20%;
   display: flex;
+  flex: 0 1 20%;
   flex-direction: column;
   gap: 20px;
 }
@@ -292,14 +292,20 @@ footer {
 
   div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
 
-    span {
-      a {
-        display: block;
-        margin: 20px 0;
-      }
+    a {
+      display: block;
+      margin: 20px 0;
+    }
+
+    p {
+      max-width: 600px;
+    }
+
+    @media only screen and (max-width: 720px) {
+      grid-template-columns: 1fr;
     }
   }
 
