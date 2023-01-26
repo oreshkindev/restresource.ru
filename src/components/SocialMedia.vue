@@ -3,19 +3,19 @@
 <template>
   <nav>
     <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
-      <img src="@/assets/logo.png" alt="/" />
+      <i />
     </router-link>
 
     <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
-      <img src="@/assets/logo.png" alt="/" />
+      <i />
     </router-link>
 
     <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
-      <img src="@/assets/logo.png" alt="/" />
+      <i />
     </router-link>
 
     <router-link to="/" href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
-      <img src="@/assets/logo.png" alt="/" />
+      <i />
     </router-link>
   </nav>
 </template>
@@ -25,8 +25,10 @@ nav {
   display: flex;
   gap: 20px;
 
-  img {
-    width: 30px;
+  i {
+    background: #525559;
+    border-radius: 50px;
+    padding: 9px 20px;
   }
 }
 </style>
