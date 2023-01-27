@@ -1,8 +1,17 @@
 <script lang="ts" setup>
+import { ref } from "vue"
+
 import TheButtons from "@/components/TheButtons.vue"
 import TheLogo from "@/components/TheLogo.vue"
 import AdBlocks from "@/components/AdBlocks.vue"
 import SocialMedia from "@/components/SocialMedia.vue"
+import NavBar from "@/components/NavBar.vue"
+
+const active = ref(false)
+
+const close = () => {
+  active.value = false
+}
 </script>
 
 <template>
@@ -17,7 +26,9 @@ import SocialMedia from "@/components/SocialMedia.vue"
     </nav>
 
     <nav>
-      <i class="icon-menu" />
+      <i class="icon-menu" @click="active = !active" />
+
+      <NavBar v-if="active" @close="close" />
 
       <a href="#">О проекте</a>
       <a href="#">Информационная база</a>
@@ -116,6 +127,10 @@ import SocialMedia from "@/components/SocialMedia.vue"
 
 .icon-menu:before {
   content: "\e001";
+}
+
+.icon-close:before {
+  content: "\e002";
 }
 
 /* Reset and base styles  */
